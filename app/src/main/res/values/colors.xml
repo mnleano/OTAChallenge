@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="textColorLight">#FFFFFF</color>
+    <color name="textColorDark">#212121</color>
+    <color name="textColorSecondary">#A2A2A2</color>
+    <color name="textColorTertiary">#666666</color>
+    <color name="textColorSpecial">#6442EF</color>
+    <color name="progress_bar_background">#32000014</color>
+    <color name="progress_bar_progress">#6442EF</color>
+    <color name="day_indicator_active">#6442EF</color>
+    <color name="strokeColor">#C4C4C4</color>
 </resources>

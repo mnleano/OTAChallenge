@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/day_mon"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/mon}" />
+
+        <include
+            android:id="@+id/day_tue"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/tue}" />
+
+        <include
+            android:id="@+id/day_wed"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/wed}" />
+
+        <include
+            android:id="@+id/day_thu"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/thu}" />
+
+        <include
+            android:id="@+id/day_fri"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/fri}" />
+
+        <include
+            android:id="@+id/day_sat"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/sat}" />
+
+        <include
+            android:id="@+id/day_sun"
+            layout="@layout/grid_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:title="@{@string/sun}" />
+
+    </LinearLayout>
+</layout>

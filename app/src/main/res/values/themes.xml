@@ -3,7 +3,15 @@
     <style name="Base.Theme.OTAChallenge" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
     </style>
 
     <style name="Theme.OTAChallenge" parent="Base.Theme.OTAChallenge" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimationDuration">5000</item>
+        <item name="postSplashScreenTheme">@style/Theme.OTAChallenge</item>
+    </style>
 </resources>

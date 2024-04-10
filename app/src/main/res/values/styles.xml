@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/ecb_medium</item>
+        <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="Text.XSmall" parent="Text">
+        <item name="android:textSize">@dimen/text_size_xsmall</item>
+    </style>
+
+    <style name="Text.XSmall.Special" parent="Text.XSmall">
+        <item name="android:textColor">@color/textColorSpecial</item>
+    </style>
+
+    <style name="Text.Small" parent="Text">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Text.Small.Special" parent="Text.Small">
+        <item name="android:textColor">@color/textColorSpecial</item>
+    </style>
+
+    <style name="Text.Medium" parent="Text">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Text.Medium.Special" parent="Text.Medium">
+        <item name="android:textColor">@color/textColorSpecial</item>
+    </style>
+
+    <style name="Text.Large" parent="Text">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+
+</resources>

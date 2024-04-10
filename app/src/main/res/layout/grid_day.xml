@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:layout_width="@dimen/day_indicator_size"
+            android:layout_height="@dimen/day_indicator_size"
+            android:layout_marginTop="8dp"
+            android:src="@{isSelected ? @drawable/day_indicator_selected : @drawable/day_indicator_normal, default=@drawable/day_indicator_normal}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/day"
+            style="@style/Text.Small"
+            android:layout_marginTop="16dp"
+            android:text="@{title}"
+            android:textAllCaps="true"
+            android:textColor="@{isSelected ? @color/textColorSpecial : @color/textColorSecondary, default=@color/textColorSecondary}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indicator"
+            tools:text="@tools:sample/first_names" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke_weight"
+            android:layout_marginTop="12dp"
+            android:background="@color/strokeColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/day" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/day_indicator_stroke_active"
+            android:background="@color/day_indicator_active"
+            android:visibility="@{isSelected ? View.VISIBLE : View.GONE, default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

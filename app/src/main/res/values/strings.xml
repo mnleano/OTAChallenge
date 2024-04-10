@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">OTA Challenge</string>
+    <string name="user_name">Sung Jin Woo</string>
+    <string name="progress">60%</string>
+    <string name="flame">100</string>
+
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+    <string name="journey">Journey</string>
 </resources>
