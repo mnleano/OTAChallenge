@@ -12,5 +12,7 @@
     <dimen name="day_indicator_stroke_active">2dp</dimen>
     <dimen name="stroke_weight">1dp</dimen>
 
+    <dimen name="activity_image_width">144dp</dimen>
+    <dimen name="activity_image_length">132dp</dimen>
 
 </resources>

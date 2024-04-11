@@ -9,7 +9,7 @@ import com.neds.otachallenge.data.views.ActivityView
 import com.neds.otachallenge.data.views.LevelView
 
 fun Activity.asView() = ActivityView(
-    id, challengeId, ActivityType[type], title, description, state, R.drawable.img_lesson
+    id, challengeId, ActivityType[type], title, description, state, R.drawable.img_activity
 )
 
 fun Level.asView(activities: List<ActivityView>) =
