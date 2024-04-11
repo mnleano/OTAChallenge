@@ -3,6 +3,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="data"
             type="com.neds.otachallenge.data.views.ActivityView" />
@@ -20,7 +22,7 @@
             android:id="@+id/activity_img"
             android:layout_width="@dimen/activity_image_width"
             android:layout_height="@dimen/activity_image_length"
-            android:src="@drawable/img_activity2"
+            app:icon="@{data.icon}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,6 +34,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:src="@drawable/ic_checkmark"
+            android:visibility="@{data.isCompleted ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="@+id/activity_img"
             app:layout_constraintTop_toTopOf="@+id/activity_img" />
 

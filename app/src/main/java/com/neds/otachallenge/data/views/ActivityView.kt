@@ -10,4 +10,5 @@ data class ActivityView(
     val description: String,
     val state: String,
     val icon: Int,
+    val isCompleted: Boolean
 )
