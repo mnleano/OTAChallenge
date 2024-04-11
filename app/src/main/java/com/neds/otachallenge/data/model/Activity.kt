@@ -9,6 +9,4 @@ data class Activity(
     val description: String,
     val descriptionB: String?,
     val state: String,
-    val icon: Icon,
-    val lockedIcon: Icon
 )

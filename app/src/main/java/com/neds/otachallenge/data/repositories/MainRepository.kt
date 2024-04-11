@@ -1,4 +1,4 @@
-package com.neds.otachallenge.data.repository
+package com.neds.otachallenge.data.repositories
 
 import android.content.Context
 import com.neds.otachallenge.data.model.Response
@@ -7,6 +7,7 @@ import java.io.IOException
 
 private const val RESPONSE_JSON = "response.json"
 class MainRepository(private val context: Context, private val moshi: Moshi) {
+
 
 
 

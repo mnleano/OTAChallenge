@@ -1,6 +1,6 @@
 package com.neds.otachallenge
 
-import com.neds.otachallenge.data.repository.MainRepository
+import com.neds.otachallenge.data.repositories.MainRepository
 import com.neds.otachallenge.data.viewModels.MainViewModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
