@@ -14,6 +14,8 @@ class MainViewModel(private val repository: MainRepository) : ViewModel() {
 
     init {
 
+        mLevels.postValue(repository.getLevels())
+
     }
 
     fun fetchDataFromJson() {
