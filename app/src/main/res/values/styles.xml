@@ -29,12 +29,20 @@
         <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
 
+    <style name="Text.Medium.Tertiary" parent="Text.Medium">
+        <item name="android:textColor">@color/textColorTertiary</item>
+    </style>
+
     <style name="Text.Medium.Special" parent="Text.Medium">
         <item name="android:textColor">@color/textColorSpecial</item>
     </style>
 
     <style name="Text.Large" parent="Text">
         <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    
+    <style name="Text.Small.Light" parent="Text.Small">
+        <item name="android:textColor">@color/textColorLight</item>
     </style>
 
 

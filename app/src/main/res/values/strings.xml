@@ -13,4 +13,7 @@
     <string name="sun">Sun</string>
 
     <string name="journey">Journey</string>
+    <string name="placeholder_level">Level 1</string>
+    <string name="placeholder_level_title">Find your tools</string>
+    <string name="placeholder_level_description">Collect the best ways to notice and manage anger</string>
 </resources>

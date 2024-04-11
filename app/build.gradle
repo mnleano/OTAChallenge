@@ -49,4 +49,11 @@ dependencies {
 
     api 'androidx.core:core-splashscreen:1.0.1'
     implementation 'com.github.MackHartley:RoundedProgressBar:3.0.0'
+
+    // Dependency Injection
+    api "io.insert-koin:koin-core:$koin_version"
+    api "io.insert-koin:koin-android:$koin_version"
+
+    implementation("com.squareup.moshi:moshi:1.12.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
 }
