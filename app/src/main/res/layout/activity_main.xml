@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="vm"
             type="com.neds.otachallenge.data.viewModels.MainViewModel" />
@@ -98,8 +99,7 @@
             android:id="@+id/journey_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:onClick="@{() -> vm.onJourneyClick()}">
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <View
                 android:layout_width="match_parent"
@@ -114,6 +114,7 @@
                 android:background="?selectableItemBackground"
                 android:drawablePadding="4dp"
                 android:gravity="center"
+                android:onClick="@{() -> vm.onJourneyClick()}"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:text="@string/journey"
