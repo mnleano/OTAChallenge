@@ -27,6 +27,18 @@ This application uses the Model-View-ViewModel (MVVM) architecture. This archite
 
 The MVVM architecture ensures that the View does not contain any business logic and the Model does not know anything about the user interface, achieving a clean separation of concerns.
 
+## Challenges and Solutions
+
+1. **Rounded Corners on ProgressBar Progress**: Implementing rounded corners on the progress of a ProgressBar was a challenging task. The default ProgressBar in Android does not support rounded corners on progress. To solve this, a third-party library, [RoundedProgressBar](https://github.com/MackHartley/RoundedProgressBar), was used. This library provides a custom ProgressBar with support for rounded corners.
+
+## Possible Improvements
+
+Here are some potential enhancements that could be made to the application:
+
+1. **Swipe to Refresh**: Implementing a swipe-to-refresh feature would allow users to manually refresh the data displayed in the application by simply swiping down on the screen. This could be particularly useful in situations where the data changes frequently.
+
+2. **Dark Mode**: Adding support for dark mode would improve the user experience for users who prefer a darker theme for their applications. This could also help to reduce eye strain in low-light conditions and potentially save battery life on devices with OLED screens.
+
 ## Acknowledgements
 
 This project uses the following third-party libraries:

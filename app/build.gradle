@@ -59,7 +59,6 @@ dependencies {
     api "io.insert-koin:koin-core:$koin_version"
     api "io.insert-koin:koin-android:$koin_version"
 
-
     // Database
     implementation "io.objectbox:objectbox-android:3.5.0"
 
