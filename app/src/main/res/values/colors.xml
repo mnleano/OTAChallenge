@@ -12,4 +12,6 @@
     <color name="day_indicator_active">#6442EF</color>
     <color name="strokeColor">#C4C4C4</color>
     <color name="level_background">#212121</color>
+
+    <color name="windowBackground">#FFFFFF</color>
 </resources>
