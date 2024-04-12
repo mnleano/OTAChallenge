@@ -1,0 +1,101 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1964909467881698262",
+      "lastPropertyId": "8:8491053601684532864",
+      "name": "Activity",
+      "properties": [
+        {
+          "id": "1:6972546467563798138",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3028466443207976936",
+          "name": "levelId",
+          "type": 5
+        },
+        {
+          "id": "3:1516870453104797902",
+          "name": "activityId",
+          "type": 9
+        },
+        {
+          "id": "4:1815967460191463795",
+          "name": "challengeId",
+          "type": 9
+        },
+        {
+          "id": "5:8376609906413592786",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "6:5749453126497378805",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "7:1333954739982391062",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "8:8491053601684532864",
+          "name": "state",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:5756636448018763093",
+      "lastPropertyId": "5:8564439726072177625",
+      "name": "Level",
+      "properties": [
+        {
+          "id": "1:1610694637038242397",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6551707219290154324",
+          "name": "level",
+          "type": 5
+        },
+        {
+          "id": "3:6483956304840280067",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "4:7865152589561858331",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "5:8564439726072177625",
+          "name": "state",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:5756636448018763093",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

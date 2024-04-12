@@ -1,16 +1,22 @@
 package com.neds.otachallenge.data.maps
 
 import com.neds.otachallenge.R
+import com.neds.otachallenge.data.entities.Activity
+import com.neds.otachallenge.data.entities.Level
 import com.neds.otachallenge.data.enums.ActivityType
 import com.neds.otachallenge.data.enums.LevelState
-import com.neds.otachallenge.data.model.Activity
-import com.neds.otachallenge.data.model.Level
+import com.neds.otachallenge.data.model.ActivityDto
+import com.neds.otachallenge.data.model.LevelDto
 import com.neds.otachallenge.data.views.ActivityView
 import com.neds.otachallenge.data.views.LevelView
 import kotlin.random.Random
 
+fun ActivityDto.asEntity(id: Long = 0, levelId: Int) = Activity(
+    id, levelId.toString(), this.id, challengeId, type, title, description, state
+)
+
 fun Activity.asView() = ActivityView(
-    id,
+    activityId,
     challengeId,
     ActivityType[type],
     title,
@@ -18,6 +24,10 @@ fun Activity.asView() = ActivityView(
     state,
     getDrawable(),
     Random.nextBoolean()
+)
+
+fun LevelDto.asEntity(id: Long = 0) = Level(
+    id, level, title, description, state
 )
 
 fun Level.asView(activities: List<ActivityView>) =

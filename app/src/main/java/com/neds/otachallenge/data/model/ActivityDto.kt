@@ -1,6 +1,6 @@
 package com.neds.otachallenge.data.model
 
-data class Activity(
+data class ActivityDto(
     val id: String,
     val challengeId: String,
     val type: String,

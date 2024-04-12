@@ -16,6 +16,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "long", "FETCH_DELAY", "600000" //fetch if last fetch was older than 10mn
     }
 
     buildTypes {
@@ -32,7 +33,11 @@ android {
         jvmTarget = '1.8'
     }
 
-    dataBinding{
+    buildFeatures {
+        buildConfig true
+    }
+
+    dataBinding {
         enabled true
     }
 }
@@ -54,6 +59,18 @@ dependencies {
     api "io.insert-koin:koin-core:$koin_version"
     api "io.insert-koin:koin-android:$koin_version"
 
-    implementation("com.squareup.moshi:moshi:1.12.0")
-    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
+
+    // Database
+    implementation "io.objectbox:objectbox-android:3.5.0"
+
+    // SharedPreference
+    api 'com.tencent:mmkv-static:1.2.13'
+    api 'com.facebook.soloader:soloader:0.10.4'
+    api 'com.facebook.flipper:flipper:0.80.0'
+    api 'com.github.ddyos:flipper-plugin-mmkv-viewer:1.0.0'
+
+    //GSON
+    api 'com.google.code.gson:gson:2.10.1'
 }
+
+apply plugin: 'io.objectbox'

@@ -1,37 +1,50 @@
 package com.neds.otachallenge.data.repositories
 
-import android.content.Context
+import com.neds.otachallenge.data.entities.Activity
+import com.neds.otachallenge.data.entities.Activity_
+import com.neds.otachallenge.data.entities.Level
+import com.neds.otachallenge.data.local.MainPrefStore
+import com.neds.otachallenge.data.maps.asEntity
 import com.neds.otachallenge.data.maps.asView
-import com.neds.otachallenge.data.model.Response
+import com.neds.otachallenge.data.remote.FakeDataService
 import com.neds.otachallenge.data.views.LevelView
-import com.squareup.moshi.Moshi
-import java.io.IOException
+import io.objectbox.Box
+import io.objectbox.query.QueryBuilder
 
-private const val RESPONSE_JSON = "response.json"
+class MainRepository(
+    private val service: FakeDataService,
+    private val levelBox: Box<Level>,
+    private val activityBox: Box<Activity>,
+    private val prefStore: MainPrefStore,
+) {
 
-class MainRepository(private val context: Context, private val moshi: Moshi) {
+    fun getLevels(isForced: Boolean): List<LevelView> {
 
+        if (prefStore.shouldFetchLevel || levelBox.isEmpty || isForced) {
+            val response = service.fetchDataFromJson()
 
-    fun getLevels(): List<LevelView>? {
-        val response = fetchDataFromJson()
-        val levels = response?.levels?.map { level ->
-            level.asView(level.activities.map { activity -> activity.asView() })
+            levelBox.removeAll()
+            activityBox.removeAll()
+
+            response?.levels?.forEach {
+                val level = it.asEntity()
+                levelBox.put(level)
+                it.activities.forEach { activityDto ->
+                    val activity = activityDto.asEntity(levelId = level.level)
+                    activityBox.put(activity)
+                }
+            }
         }
 
+        val levels = levelBox.all.map { level ->
+            level.asView(activityBox.query().equal(
+                Activity_.levelId,
+                level.level.toString(),
+                QueryBuilder.StringOrder.CASE_INSENSITIVE
+            ).build().find().map { a -> a.asView() })
+        }
+
+        prefStore.levelLastTimeSaved = System.currentTimeMillis()
         return levels
-    }
-
-    fun fetchDataFromJson(): Response? {
-        val json: String?
-        try {
-            val inputStream = context.assets.open(RESPONSE_JSON)
-            json = inputStream.bufferedReader().use { it.readText() }
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-            return null
-        }
-
-        val adapter = moshi.adapter(Response::class.java)
-        return adapter.fromJson(json)
     }
 }

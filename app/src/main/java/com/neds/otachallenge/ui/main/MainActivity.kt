@@ -1,7 +1,7 @@
 package com.neds.otachallenge.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
 import com.neds.otachallenge.R
@@ -27,14 +27,19 @@ class MainActivity : AppCompatActivity() {
         observeData()
     }
 
-    private fun setupLevels(){
+    private fun setupLevels() {
         adapter = LevelAdapter()
         binding.recyclerView.adapter = adapter
     }
 
-    private fun observeData(){
+    private fun observeData() {
         vm.levels.observe(this) {
             adapter.setLevels(it)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        vm.fetchLevels()
     }
 }

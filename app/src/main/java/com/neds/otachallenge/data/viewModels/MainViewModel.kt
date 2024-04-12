@@ -12,14 +12,11 @@ class MainViewModel(private val repository: MainRepository) : ViewModel() {
     private val mLevels = MutableLiveData<List<LevelView>>()
     val levels: LiveData<List<LevelView>> = mLevels
 
-    init {
-
-        mLevels.postValue(repository.getLevels())
-
+    fun fetchLevels(isForced: Boolean = false) {
+        mLevels.postValue(repository.getLevels(isForced))
     }
 
-    fun fetchDataFromJson() {
-        Log.d("MainVm", "fetchDataFromJson")
-        repository.fetchDataFromJson()
+    fun onJourneyClick() {
+        Log.d("MainViewModel", "onJourneyClick")
     }
 }
